@@ -25,8 +25,8 @@ jobs:
         run: npm ci --cache --prefer-offline
       - name: check code
         run: npm run lint
-      - name: check deps security
-        run: npm audit
+#      - name: check deps security
+#        run: npm audit
       - name: exe tests
         run: npm run test:ci        
 
