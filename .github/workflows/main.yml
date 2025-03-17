@@ -22,7 +22,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: ./server/package-lock.json
       - name: install deps
-        run: npm ci --cache --prefer-offline
+        run: npm ci --prefer-offline
       - name: check code
         run: npm run lint
 #      - name: check deps security
