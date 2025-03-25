@@ -10,6 +10,10 @@ on:
 jobs:
   tests:
     runs-on: self-hosted
+    container:
+      image: node:18
+      env:
+        NODE_ENV: development
     defaults:
       run:
         working-directory: ./server
@@ -32,7 +36,7 @@ jobs:
 
   deploy:
     needs: tests
-    runs-on: self-hosted
+    runs-on: ubuntu:latest
     steps:
       - name: checkout code
         uses: actions/checkout@v4
